@@ -1,0 +1,244 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* === NAVIGATION BAR === */
+.navbar {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* NAVIGATION BUTTONS */
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-btn, 
+.dropbtn {
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover,
+.dropbtn:hover,
+.nav-btn.active {
+  background: #ffd700;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* === DROPDOWN MENU === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #ffd700;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #333;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffd700;
+  color: #111;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* === BUTTON STYLES === */
+.btn {
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #ffd700;
+  color: #111;
+}
+
+.btn.primary:hover {
+  background: #ffcd00;
+  transform: scale(1.05);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #ffd700;
+}
+
+.btn.ghost:hover {
+  background: #ffd700;
+  color: #111;
+}
+
+/* === HOME INTRO === */
+.home-intro {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.home-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+/* === CAR GRID === */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.car-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.car-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.car-card h3 {
+  padding: 0.8rem 1rem 0 1rem;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.car-card p {
+  padding: 0 1rem 1rem 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background: #111;
+  color: #fff;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-btn, .dropbtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
